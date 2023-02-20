@@ -2,8 +2,9 @@
 
 /**
  * main - entry point
- * Return : always 0
+ * Return : Always 0(success)
  * int main(void)- does not take any input parameters.
+ * return value of main is 0 (int type)
  */
 
 int main(void)
