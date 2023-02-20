@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main function uses printf to give an output
- * returns (0)
+ * main - Entry point
+ * Return: 0 
+ * main returns type int
  */
 
 int main(void)
