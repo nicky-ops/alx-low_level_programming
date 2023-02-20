@@ -1,12 +1,11 @@
 #include <unistd.h>
 
-/**
+/*
  * main - Entry point
- * main - Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
- *                followed by a new line, to standard error."
- * Returns: Always (1)
- *
+ * Return: Always 0 (Success)
+ * int main (void) this execute the strings
  */
+
 int main(void)
 {
 	write(2,
