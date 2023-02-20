@@ -2,9 +2,8 @@
 
 /**
  * main - entry point
- * Return : Always 0(success)
- * int main(void)- does not take any input parameters.
- * return value of main is 0 (int type)
+ * Return: Always 0 (Success)
+ * int main (void) this execute the strings
  */
 
 int main(void)
