@@ -9,7 +9,7 @@
 
 int _atoi(char *s)
 {
-int sign = 1;
+	int sign = 1;
 #include "main.h"
 
 /**
@@ -21,29 +21,29 @@ int sign = 1;
 
 int _atoi(char *s)
 {
-int sign = 1;
-unsigned int num = 0;
+	int sign = 1;
+	unsigned int num = 0;
 
-do {
-if (*s == -)
-sign *= -1;
-else if (*s >= 0 && *s <= 9)
-num = (num * 10) + (*s - 0);
-else if (num > 0)
-break;
-} while (*s++);
+	do {
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+		else if (num > 0)
+			break;
+	} while (*s++);
 
-return (num * sign);
-}unsigned int num = 0;
+	return (num * sign);
+}	unsigned int num = 0;
 
-do {
-if (*s == -)
-sign *= -1;
-else if (*s >= 0 && *s <= 9)
-num = (num * 10) + (*s - 0);
-else if (num > 0)
-break;
-} while (*s++);
+	do {
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+		else if (num > 0)
+			break;
+	} while (*s++);
 
-return (num * sign);
+	return (num * sign);
 }
