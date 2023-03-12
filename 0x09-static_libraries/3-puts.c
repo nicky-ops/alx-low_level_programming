@@ -1,15 +1,21 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
- * main - Prints "Programming is like building a multilingual
- *                puzzle, followed by a new line.
+ * _puts -  prints a string, followed by a new line
+ * @str: string
  *
- * Return: Always 0.
+ * Description: prints a string
+ * On success: return no error
  */
 
-int main(void)
+void _puts(char *str)
 {
-puts("\"Programming is like building a multilingual puzzle");
+	int i = 0;
 
-return (0);
+	while (*(str + i) != '\0')
+	{
+		putchar(*(str + i));
+		i++;
+	}
+	putchar(10);
 }
