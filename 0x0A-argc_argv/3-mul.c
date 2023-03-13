@@ -4,7 +4,7 @@
   * main - multiplies two numbers
   * @argc: integer number of parameters
   * @argv: array of characters
-  * Return: 1
+  * Return: 1 and 0
   */
 int main(int argc, char *argv[])
 {
@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("Error");
+		printf("Error\n");
+		return (1);
 	}
-	return (1);
+	return (0);
 }
