@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
   * main - adds positive numbers
   * @argc: integer number of parameters
@@ -8,23 +9,25 @@
   */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, sum = 0, count = 1;
 
-	for (i = 1; i < argc; i++)
+	if (argc == 1)
 	{
-		if (argc == 1)
+		printf("0\n");
+		return (0);
+	}
+	while (count < argc)
+	{
+		for (i = 0; argv[count][i] != '\0'; i++)
 		{
-			printf("0\n");
+			if (!(isdigit(argv[count][i])))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else if (!atoi(argv[i]))
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{
-			sum += atoi(argv[i]);
-		}
+		sum += atoi(argv[count]);
+		count++;
 	}
 	printf("%d\n", sum);
 
