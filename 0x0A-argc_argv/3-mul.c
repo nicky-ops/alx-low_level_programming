@@ -9,6 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int  multiple = 0;
+
 	if (argc == 3)
 	{
 		multiple = atoi(argv[1]) * atoi(argv[2]);
