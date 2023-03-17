@@ -7,6 +7,7 @@
   * @s1: array of characters
   * @s2: array of characters
   * @n: number of bytes
+  * Return: pointer to newly allocated space in memory
   */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
