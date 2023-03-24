@@ -5,7 +5,7 @@
 /**
   * print_numbers - prints numbers
   * @n: no of arguments/parameters
-  * @*separator: const char string to be printed between,
+  * @separator: const char string to be printed between,
   * numbers
   * Return: void
   */
