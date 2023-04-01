@@ -3,9 +3,10 @@
 #include <stddef.h>
 
 /**
-  * struct node - structure definition
-  * @data: integer to store data in linked list
-  * @link: pointer to the address of the next node
+  * struct list_s - structure definition
+  * @str: string of elements to store data in linked list
+  * @len: length of linked list
+  * @next: pointer to the address of the next node
   */
 typedef struct list_s
 {
