@@ -9,16 +9,33 @@
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fn;
-	char ch[1024];
+	int fn;
+	char *ch;
+	ssize_t i, j;
 
-	if (filename == NULL)
+	fn = open(filename, O_RDONLY);
+	if (fn == -1)
 	{
 		return (0);
 	}
-
-	fn = fopen(filename, "r");
-	printf("%s", fgets(ch, letters, fn));
-	fclose(fn);
-	return (letters);
+	ch = malloc(sizeof(char) * letters);
+	if (ch == NULL)
+	{
+		close(fn);
+		return (0);
+	}
+	i = read(fn, ch, letters);
+	if (i == -1)
+	{
+		free(ch);
+		return (0);
+	}
+	j = write(STDOUT_FILENO, ch, i);
+	free(ch);
+	if (i != j)
+	{
+		return (0);
+	}
+	return (j);
+	close(fn);
 }
