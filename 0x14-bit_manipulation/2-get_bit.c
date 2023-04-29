@@ -1,30 +1,20 @@
 #include "main.h"
-#include <string.h>
-#include <math.h>
 
 /**
-  * get_bit - returns the value of a bit at a given index
-  * @n: number to be chaecked
-  * @index: index starting from 0 of the wanted bit
-  * Return: value of hte bit at index or -1
-  */
-
+ * get_bit - returns the value of a bit at an index in a decimal number
+ * @n: number to search
+ * @index: index of the bit
+ *
+ * Return: value of the bit
+ */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int i, j;
-	unsigned int k = sizeof(unsigned long int) * 8 - 1;
+	int bit_val;
 
-	if (index > k)
-	{
+	if (index > 63)
 		return (-1);
-	}
 
-	i = 1 << index;
-	j = n & i;
+	bit_val = (n >> index) & 1;
 
-	if (j == k)
-	{
-		return (1);
-	}
-	return (0);
+	return (bit_val);
 }
