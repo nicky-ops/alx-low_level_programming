@@ -1,0 +1,5 @@
+school: main.o
+
+main.o: m.h
+
+all: school
